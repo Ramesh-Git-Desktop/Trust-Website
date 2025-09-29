@@ -1,0 +1,359 @@
+/* For Navbar */
+/* .header {
+  
+  height: 55px;
+  display: grid;
+  grid-template-columns: 30% 50% 16% 4%;
+  align-items: center;
+padding: 0 50px;
+  
+}
+
+
+.header .logo img {
+  height: 40px;
+}
+
+.header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  height: 100%;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.header .nav-links li {
+  display: inline;
+}
+
+.header .nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.header .search-bar {
+  display: inline-block;
+}
+
+.header .search-bar input {
+  padding: 5px;
+}
+
+.header .user-profile,
+.header .cart-icon {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.header .user-profile img,
+.header .cart-icon img {
+  height: 30px;
+  border-radius: 100%;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+  }
+    .header .nav-links {
+        display: none; 
+    }
+    .header .search-bar {
+        width: 100%;
+    }
+    .header .search-bar input {
+            width: 100%;
+        }
+    .header .user-profile,
+    .header .cart-icon {
+        margin-left: 10px;
+    }
+    
+} */
+
+/* Base Styling */
+.header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Profile image */
+.user-profile img {
+  border-radius: 50%;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 992px) {
+  .hamburger {
+    display: block; /* Show hamburger */
+  }
+
+  .nav-links {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: -1px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show menu when open */
+  }
+
+  .search-bar,
+  .user-profile {
+    display: none; /* Hide search + profile on mobile */
+  }
+}
+
+/* For scrolling animation */
+@keyframes appear {
+  from {
+    opacity: 0.8;
+    scale: 0.6;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.block{
+ animation: appear linear;
+ animation-timeline:view();
+ animation-range: entry 0;
+}
+/* For Banner */
+.banner {
+  height: 400px;
+  width: 100%;
+  background-image: url('../../assets/Img/banner.avif');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  align-items: center;
+  display: flex;
+}
+.banner-content{
+     padding: 50px;
+    z-index: 1;
+}
+.banner-buttons{
+    display: flex;
+    gap: 10px;
+}
+.primary-btn{
+    background-color: #0dc2ff;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.primary-btn:hover{
+    background-color: #0a9bb8;
+    transition: 0.3s;
+}
+.default-btn{
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 7px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.review-content{
+    padding: 50px 200px;
+}
+.review-content-row{
+    border-radius: 20px;
+    box-shadow: 0 0 20px #cccccc;
+}
+.review-content-row:hover{
+    box-shadow: 0 0 30px #898989;
+    transition: 0.5s;
+    transform: scale(1.01);
+}
+.review-content div div{
+    padding: 25px;
+}
+
+.course-content{
+    padding: 50px 100px;
+}
+.course-content h2{
+    color: #333;
+    font-weight: 400;
+}
+.find-content{
+    padding: 50px 200px;
+}
+.find-content .find-content-row {
+    background: linear-gradient(to right, #c4edf8, #59f4f4);
+    display: flex;
+    align-items: center;
+    /* padding: 15px 50px; */
+    border-radius: 20px;
+}
+
+.find-content .find-content-row h3{
+    margin: 0;
+    color: #333;
+}
+.find-content .find-content-row:hover{
+    box-shadow: 0 0 20px #898989;
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+.Course-Categories li{
+    padding:10px 10px 10px 5px;
+    background-color: #f5f4f4;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.Course-Categories li a{
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Course-Categories li a p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* show only 1 line */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.course-image{
+    height: 150px;
+    width: 100%;
+    /* object-fit: cover; */
+}
+/* /-------------------------------------------------------/ */
+.left-navbar{
+      box-shadow: 0 0 10px rgb(211, 210, 210);
+      border-radius: 10px;
+}
+
+.devsite-book-nav-filter-container{
+    display: flex;
+    gap: 10px;
+}
+.devsite-book-nav-filter{
+    background-color:#f5f6f7;
+    padding: 5px;
+    width: 100%;
+    margin: 5px;
+}
+.filter-icon-1 ,.filter-icon-2 ,.filter-icon-3{
+    border-bottom: 1px solid #425066;
+}
+.filter-icon-1{
+    width: 10px;
+    border: 1px solid #000;
+}
+.filter-icon-2{
+    width: 8px;
+    border: 1px solid #000;
+}
+.filter-icon-3{
+        width: 5px;
+        border: 1px solid #000;
+}
+.devsite-syntax-nn{
+    color: #9334e6;
+}
+
+.devsite-mobile-nav-bottom li a{
+    text-decoration: none;
+}
+
+.accordion ul li a , .accordion ul li span{
+    font-size: 13px;
+    font-weight: 500;
+    width: 100%;
+    color: #425066;
+}
+.accordion-body{
+    border-bottom: 1px solid rgb(219, 218, 218);
+}
+.accordion-body li{
+    padding:2px 0px 0px 30px !important;
+}
+
+.accordion-body li:hover{
+    background-color: #eaeaeb;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) {
+  color: #000 !important;
+  background-color: #bdbdbd !important;
+  border-radius: 0;
+}
+.fw-semibold {
+  font-weight: 600;
+  color: #333;
+}
+.mt-2 {
+  margin-top: 10px;
+}
+/* /------------------------About Us Page Start--------------------------/ */
+.about-us-banner{
+  background-image: url("/public/IMG/About-us.png");
+  height: 390px;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* -------------Footer -------------- */
+.footer-lists li ul li a {
+ color: #fff;
+ font-size: 14px;
+}
