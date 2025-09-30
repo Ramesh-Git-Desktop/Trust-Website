@@ -1,17 +1,17 @@
 {
   "name": "project-2",
-  "homepage": "https://Ramesh-Git_desktop.github.io/Trust-Website",
+  "homepage": "https://Ramesh-Git-Desktop.github.io/Trust-Website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+ "scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.0.0",
     "@fortawesome/free-regular-svg-icons": "^7.0.0",
